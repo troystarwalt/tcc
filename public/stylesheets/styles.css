@@ -1,8 +1,33 @@
-header.jumbotron h1 {
-  background-color: white;
-  font-size: 40px;
-  text-align: center; }
-header.jumbotron:hover {
-  color: red; }
+html {
+  background-color: #CF0608; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.jumbotron {
+  height: 20vh;
+  padding: 0;
+  background: white; }
+  .jumbotron .img-thumbnail {
+    height: 20vh;
+    width: auto;
+    float: left;
+    border: 0; }
+  .jumbotron h1 {
+    font-size: 8vh;
+    height: 100%;
+    text-align: center;
+    float: left; }
+  .jumbotron:hover {
+    color: #CF0608; }
+
+#map {
+  width: 90%;
+  height: 75vh; }
+
+#carousel {
+  clear: both;
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
