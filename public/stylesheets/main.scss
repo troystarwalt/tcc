@@ -1,36 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 html {
 	background-color: #CF0608;
+	font-family: 'Lato', sans-serif;
 }
 img {
 	width: 100%;
 	height:auto;
 }
-.jumbotron {
-	height:20vh;
-	padding:0;
+.navbar {
 	background:white;
-	.img-thumbnail {
-		height:20vh;
-		width: auto;
-		float:left;
-		border:0;
-	}
-	h1 {
-		font-size: 8vh;
-		height:100%;
-		text-align: center;
-		float:left;
-	}
-	&:hover {
+	.navbar-text{
+		padding-right: 2%;
 		color:#CF0608;
 	}
 }
+
 #map {
+	padding:10px;
 	width:90%;
 	height:75vh;
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
 }
 #carousel {
-	clear:both;
-	width:100%;
+	padding:10px;
+	height:400px;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	border: 5px #CF0608;
 
+	.carousel-indicators {
+		li {
+			.active {
+				background-color: #CF0608;
+			}	
+			border-color: #CF0608;
+		}
+	}
+	.carousel-control {
+		background: rgba(0,0,0,.1);
+	}
+	.item {
+		margin-top: 10px;
+		img {
+			width:223px;
+			height:243px;
+			margin:auto;
+		}
+		p {
+			text-align: center;
+			width:223px;
+			margin-right: auto;
+			margin-left:auto;
+			font-size: 18px;
+			.maker {
+				font-weight: bold;
+			}
+			.model {
+				color:#CF0608;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.storefront {
+	height: auto;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	display: block;
+}
+.container {
+	width:100%;
+}
+footer {
+	
+	.container{
+		width:50%;
+		height:20vh;
+		float:left;
+		background-color: #F6F6F6;
+	}
+}
+.bold {
+	font-weight: bold;
 }

@@ -1,33 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 html {
-  background-color: #CF0608; }
+  background-color: #CF0608;
+  font-family: 'Lato', sans-serif; }
 
 img {
   width: 100%;
   height: auto; }
 
-.jumbotron {
-  height: 20vh;
-  padding: 0;
+.navbar {
   background: white; }
-  .jumbotron .img-thumbnail {
-    height: 20vh;
-    width: auto;
-    float: left;
-    border: 0; }
-  .jumbotron h1 {
-    font-size: 8vh;
-    height: 100%;
-    text-align: center;
-    float: left; }
-  .jumbotron:hover {
+  .navbar .navbar-text {
+    padding-right: 2%;
     color: #CF0608; }
 
 #map {
+  padding: 10px;
   width: 90%;
-  height: 75vh; }
+  height: 75vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
 #carousel {
-  clear: both;
+  padding: 10px;
+  height: 400px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px #CF0608; }
+  #carousel .carousel-indicators li {
+    border-color: #CF0608; }
+    #carousel .carousel-indicators li .active {
+      background-color: #CF0608; }
+  #carousel .carousel-control {
+    background: rgba(0, 0, 0, 0.1); }
+  #carousel .item {
+    margin-top: 10px; }
+    #carousel .item img {
+      width: 223px;
+      height: 243px;
+      margin: auto; }
+    #carousel .item p {
+      text-align: center;
+      width: 223px;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 18px; }
+      #carousel .item p .maker {
+        font-weight: bold; }
+      #carousel .item p .model {
+        color: #CF0608;
+        font-weight: bolder; }
+
+.storefront {
+  height: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  display: block; }
+
+.container {
   width: 100%; }
+
+footer .container {
+  width: 50%;
+  height: 20vh;
+  float: left;
+  background-color: #F6F6F6; }
+
+.bold {
+  font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */

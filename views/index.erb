@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TCC, Verizon Wireless of Great Neck Premium Retailer</title>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+	<script type="text/javascript" src="/scripts/script.js"></script>
+</head>
+<body id="bootstrap-override">
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">
+	        <img src="/images/vwar_tapered_inv_thumb.jpg">
+	      </a>
+	    </div>
+	    	<h1 class='navbar-text navbar-right'>Verizon Wireless of Great Neck Premium Retailer, TCC</h1>
+		</div>
+	  </div>
+	</nav>
+	<div class="container">
+		<%= erb :phone_carousel %>	
+	</div>
+	<div class="container">
+		<img class="storefront img-thumbnail" src="/images/storefront_fb.jpg">
+	</div>
+
+
+	
+	<div class="container content">
+		<iframe id="map" width="800px" height="600px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ252F75mJwokReq832rz4690&key=AIzaSyAvyaFLY83k0EzvdbvuaQwgkM9Fb_Ei0q4" allowfullscreen></iframe>
+	</div>
+	<footer>
+		<div class="container">
+			<h2>Contact:</h2>
+			<ul class="list-group">
+				<li class="list-group-item"><span class="bold">Telephone:</span> 516-466-9200</li>
+				<li class="list-group-item"><span class="bold">Email:</span> vzgreatneck@gmail.com</li>
+				<li class="list-group-item"><span class="bold">Location:</span> 67 Middle Neck Road, Great Neck, NY 11021</li>
+			</ul>
+		</div>
+		<div class="container">
+			<h2>Hours:</h2>
+			<ul class="list-group">
+				<li class="list-group-item"><span class="bold">Monday - Thursday:</span> 10am - 8pm</li>	
+				<li class="list-group-item"><span class="bold">Sunday:</span> 10am - 6pm</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
