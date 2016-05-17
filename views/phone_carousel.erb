@@ -10,7 +10,7 @@
 	  <div class="carousel-inner" role="listbox">
 	  		<% @images.each_with_index do |string, index| %>
 				<div <%= index == 0 ? "class= 'item active' " : "class='item'" %> >
-					<img class='img-thumbnail' src=<%= string %> >
+					<img src=<%= string %> >
 					<p><span class='maker'><%= @makers[index] %></span></p>
 					<p><span class='model'><%= @models[index] %></span></p>
 				</div>

@@ -1,3 +1,4 @@
+// Looks better in landscape than portrait on most devices.
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 html {
 	background-color: #CF0608;
@@ -32,15 +33,17 @@ img {
 	border: 5px #CF0608;
 
 	.carousel-indicators {
+		display: inline-block;
 		li {
-			.active {
-				background-color: #CF0608;
-			}	
 			border-color: #CF0608;
+			.active {
+				background-color: #CF0608;// Not overriding bootsrap! 
+			}	
 		}
 	}
 	.carousel-control {
 		background: rgba(0,0,0,.1);
+		color:#CF0608;
 	}
 	.item {
 		margin-top: 10px;
@@ -83,6 +86,10 @@ footer {
 		height:20vh;
 		float:left;
 		background-color: #F6F6F6;
+		.copyright {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 .bold {

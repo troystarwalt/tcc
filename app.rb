@@ -3,7 +3,7 @@ require 'sinatra'
 get '/' do
 	@images = gather_phone_data.every_nth(3) #every third starting with the first is an image src
 	@makers = gather_phone_data.drop(1).every_nth(3) #every third starting with the second is a maker
-	@models = gather_phone_data.drop(2).every_nth(3) #every third starting witht the third is a model
+	@models = gather_phone_data.drop(2).every_nth(3) #every third starting with the third is a model
 	erb :index
 end
 

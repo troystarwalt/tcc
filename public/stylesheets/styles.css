@@ -28,12 +28,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   border: 5px #CF0608; }
-  #carousel .carousel-indicators li {
-    border-color: #CF0608; }
-    #carousel .carousel-indicators li .active {
-      background-color: #CF0608; }
+  #carousel .carousel-indicators {
+    display: inline-block; }
+    #carousel .carousel-indicators li {
+      border-color: #CF0608; }
+      #carousel .carousel-indicators li .active {
+        background-color: #CF0608; }
   #carousel .carousel-control {
-    background: rgba(0, 0, 0, 0.1); }
+    background: rgba(0, 0, 0, 0.1);
+    color: #CF0608; }
   #carousel .item {
     margin-top: 10px; }
     #carousel .item img {
@@ -68,6 +71,9 @@ footer .container {
   height: 20vh;
   float: left;
   background-color: #F6F6F6; }
+  footer .container .copyright {
+    width: 100%;
+    height: auto; }
 
 .bold {
   font-weight: bold; }
