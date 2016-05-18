@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/activerecord'
-# require 'rack-flash'
 require 'sinatra/flash'
 
 set :database, 'sqlite3:tcc.sqlite3'
@@ -27,17 +26,46 @@ get '/login' do
 	erb :login
 end
 
+get '/admin' do
+	erb :admin
+end
+get '/sign_up' do
+	erb :sign_up
+end
+post 'sign_up' do
+	if params[:password] == params[:password_confirmation]
+
+		@user = User.new(username: params[:username], password: params[:password])
+
+		if @user.save
+			flash[:notice] = "User successfully created."
+			redirect 'login'
+		else
+			flash[:alert] = "Sorry, there was a problem."
+		end
+	else
+		flash[:alert] = "Passwords do not match."
+		redirect '/sign_up'
+	end
+end
+
 post '/sign_in' do
   @user = User.where(params[:user]).first
+
   if @user && @user.password == params[:password]
+  
     flash[:notice] = "You've successfully signed in."
     session[:user_id] = @user.id
     redirect '/sign_up'
+  
   else
+  
     flash[:alert] = "Sorry, there was a problem signing in."
     redirect '/'
+  
   end
 end
+
 
 def gather_phone_data
 	lines = File.readlines('phone_images.txt')#opens file in read/write mode
