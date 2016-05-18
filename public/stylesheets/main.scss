@@ -14,6 +14,12 @@ img {
 		padding-right: 2%;
 		color:#CF0608;
 	}
+	& > .container-fluid > .collapse > .navbar-nav {
+		border-top: 2px solid #CF0608;
+		& > li:hover{
+			border-bottom: 2px solid #CF0608;
+		}
+	}
 }
 
 #map {
@@ -37,7 +43,7 @@ img {
 		li {
 			border-color: #CF0608;
 			.active {
-				background-color: #CF0608;// Not overriding bootsrap! 
+				background: #CF0608 !important;// Not overriding bootsrap! 
 			}	
 		}
 	}
@@ -80,16 +86,19 @@ img {
 	width:100%;
 }
 footer {
-	
+	background: #CF0608;
 	.container{
 		width:50%;
-		height:20vh;
+		height:auto;
 		float:left;
 		background-color: #F6F6F6;
-		.copyright {
-			width: 100%;
-			height: auto;
-		}
+	}
+	.copyright {
+		height: auto;
+		width:50%;
+		clear:both;
+		margin: auto;
+		text-align: center;	
 	}
 }
 .bold {

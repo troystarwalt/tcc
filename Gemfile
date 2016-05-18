@@ -1,6 +1,11 @@
 source "http://rubygems.org/"
 gem 'pry'
 gem 'sinatra'
+gem 'sinatra-flash'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'sqlite3'
 gem 'rerun'
 gem 'nokogiri'
 gem 'httparty'
