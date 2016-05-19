@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>TCC, Verizon Wireless of Great Neck Premium Retailer</title>
+	<title><%= title %></title>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	
@@ -42,10 +42,24 @@
 			</div>
 		</div>
 	</nav>
-
+	
+	<% if flash[:notice] %>
+		<p class="alert alert-success"><%= flash[:notice] %>
+	<% end %>
+	<% if flash[:error] %>
+		<p class="alert alert-error"><%= flash[:error] %>
+	<% end %>
 
 	<%= yield %>
-
+	
+	<script>
+	    //** removes alerts after 4 seconds */
+	    window.setTimeout(function() {
+	        $(".alert").fadeTo(4500, 0).slideUp(500, function(){
+	            $(this).remove();
+	        });
+	    }, 4000);
+    </script>
 	
 </body>
 </html>

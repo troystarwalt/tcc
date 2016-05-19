@@ -2,17 +2,25 @@ require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
-
-set :database, 'sqlite3:tcc.sqlite3'
-
-enable :sessions
-# use Rack::Flash, :sweep => true
-set :sessions => true
+require 'sinatra/redirect_with_flash'
+require './environments.rb' #sets up postgres db
 
 helpers do
-  def current_user
-    session[:user_id].nil? ? nil : User.find(session[:user_id])
-  end
+	def title
+		@title ? "TCC, Verizon Wireless of Great Neck Premium Retailer - " + @title : "TCC, Verizon Wireless of Great Neck Premium Retailer"
+	end 
+	def protected!
+		return if authorized?
+		headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
+		halt 401, "Not authorized\n"
+	end
+
+	def authorized?
+		user = ENV['TCC_USERNAME']
+		pass = ENV['TCC_PASSWORD']
+		@auth ||=  Rack::Auth::Basic::Request.new(request.env)
+		@auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == [user, pass]
+	end
 end
 
 get '/' do
@@ -22,50 +30,10 @@ get '/' do
 	erb :index
 end
 
-get '/login' do
-	erb :login
-end
-
 get '/admin' do
-	erb :admin
+	protected!
+	erb :admin, locals: {title: 'admin panel'}
 end
-get '/sign_up' do
-	erb :sign_up
-end
-post 'sign_up' do
-	if params[:password] == params[:password_confirmation]
-
-		@user = User.new(username: params[:username], password: params[:password])
-
-		if @user.save
-			flash[:notice] = "User successfully created."
-			redirect 'login'
-		else
-			flash[:alert] = "Sorry, there was a problem."
-		end
-	else
-		flash[:alert] = "Passwords do not match."
-		redirect '/sign_up'
-	end
-end
-
-post '/sign_in' do
-  @user = User.where(params[:user]).first
-
-  if @user && @user.password == params[:password]
-  
-    flash[:notice] = "You've successfully signed in."
-    session[:user_id] = @user.id
-    redirect '/sign_up'
-  
-  else
-  
-    flash[:alert] = "Sorry, there was a problem signing in."
-    redirect '/'
-  
-  end
-end
-
 
 def gather_phone_data
 	lines = File.readlines('phone_images.txt')#opens file in read/write mode
