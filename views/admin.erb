@@ -4,7 +4,7 @@
 		<!-- Value attribute of input is loaded from database and updated upon click. -->
 		<input type="hidden" name="[toggle]toggleCarousel" value=<%= @status %>>
 		<button><span class="hideShowButton">
-			<% if @status == 'true'%>
+			<% if @status == true%>
 				Hide Carousel
 			<% else %>
 				Show Carousel
