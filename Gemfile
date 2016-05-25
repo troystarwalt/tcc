@@ -3,17 +3,22 @@ gem 'pry'
 gem 'rerun'
 
 gem 'sinatra'
+gem 'activerecord'
+gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
 
-gem 'activerecord'
-gem 'sinatra-activerecord'
-
 gem 'rake'
 
-gem 'pg'
 
 gem 'nokogiri'
 gem 'httparty'
 gem 'sass'
-gem 'bcrypt'
+
+group :development do
+ gem 'sqlite3'
+end
+
+group :production do
+ gem 'pg'
+end
