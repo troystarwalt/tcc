@@ -1,7 +1,10 @@
-<hr>
-<div class="container">
-	<%= erb :phone_carousel %>	
-</div>
+<% if @toggle == 'true' %>
+	<hr>
+	<div class="container">
+		<%= erb :phone_carousel %>	
+	</div>
+<% end %>
+
 <hr>
 <div class="container">
 	<img class="storefront img-thumbnail" src="/images/storefront_fb.jpg">
