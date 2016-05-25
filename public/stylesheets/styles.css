@@ -71,7 +71,9 @@ img {
   width: 100%; }
 
 footer {
-  background: #CF0608; }
+  background: #CF0608;
+  height: auto;
+  width: 100%; }
   footer .container {
     width: 50%;
     height: auto;

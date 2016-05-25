@@ -3,7 +3,12 @@ require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
-require './environments.rb' #sets up postgres db
+require './environments'
+
+
+class Toggle < ActiveRecord::Base
+end
+
 
 helpers do
 	def title
@@ -32,7 +37,28 @@ end
 
 get '/admin' do
 	protected!
+	toggles = Toggle.all #check all switches
+	if toggles == []
+		toggle = Toggle.create(toggled: true)
+		@status = toggle.toggled
+	else
+		toggle = toggles.find(1)
+		@status = toggle.toggled.to_s
+	end
 	erb :admin, locals: {title: 'admin panel'}
+end
+
+
+
+post '/hideShowCarousel' do
+	status = params[:toggle]['toggleCarousel']
+	if status == 'true'
+		Toggle.find(1).update(toggled: 'true')
+	elsif status == 'false'
+		Toggle.find(1).update(toggled: 'false')
+	else
+		flash[:alert] = "There was a problem."
+	end
 end
 
 def gather_phone_data

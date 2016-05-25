@@ -1,5 +1,17 @@
-<div class="container">
+<div class="container admin-container">
 	<h1>Admin Panel</h1>
-	<button>Hide Carousel</button>
-	<button>Update Carousel</button>
+	<form id="hideCarousel">
+		<!-- Value attribute of input is loaded from database and updated upon click. -->
+		<input type="hidden" name="[toggle]toggleCarousel" value=<%= @status %>>
+		<button><span class="hideShowButton">
+			<% if @status == 'true'%>
+				Hide Carousel
+			<% else %>
+				Show Carousel
+			<% end %>	
+		</span></button>
+	</form>
+	<form id="updateCarousel">
+		<button><span class="updateButton">Update Carousel</span></button>
+	</form>
 </div>

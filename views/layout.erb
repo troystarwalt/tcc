@@ -43,8 +43,8 @@
 		</div>
 	</nav>
 	
-	<% if flash[:notice] %>
-		<p class="alert alert-success"><%= flash[:notice] %>
+	<% if flash[:alert] %>
+		<p class="alert alert-error"><%= flash[:alert] %>
 	<% end %>
 	<% if flash[:error] %>
 		<p class="alert alert-error"><%= flash[:error] %>
