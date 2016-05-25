@@ -42,7 +42,7 @@ get '/admin' do
 	protected!
 	toggles = Toggle.all #check all switches
 	if toggles == []
-		toggle = Toggle.create(toggled: true)
+		toggle = Toggle.create(toggled: 'true')
 		@status = toggle.toggled
 	else
 		toggle = toggles.find(1)
