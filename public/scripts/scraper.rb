@@ -1,7 +1,6 @@
-require 'HTTParty'
-require 'Nokogiri'
-require 'JSON'
-require 'Pry'
+require 'httparty'
+require 'nokogiri'
+require 'json'
 
 #http response
 page = HTTParty.get 'http://www.verizonwireless.com'
