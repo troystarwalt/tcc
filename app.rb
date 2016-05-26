@@ -46,7 +46,7 @@ get '/admin' do
 		toggle = Toggle.create(toggled: true)
 		@status = toggle.toggled
 	else
-		toggle = toggles.find(1)
+		toggle = Toggle.find(1)
 		@status = toggle.toggled
 	end
 	erb :admin, locals: {title: 'admin panel'}
