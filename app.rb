@@ -29,12 +29,14 @@ helpers do
 end
 
 get '/' do
-	if Toggle.exists?(1)
-		@toggle = Toggle.find(1).toggled
-		if @toggle == true
-			@images = gather_phone_data.every_nth(3) #every third starting with the first is an image src
-			@makers = gather_phone_data.drop(1).every_nth(3) #every third starting with the second is a maker
-			@models = gather_phone_data.drop(2).every_nth(3) #every third starting with the third is a model
+	if File.exist?('phone_images.txt')
+		if Toggle.exists?(1)
+			@toggle = Toggle.find(1).toggled
+			if @toggle == true
+				@images = gather_phone_data.every_nth(3) #every third starting with the first is an image src
+				@makers = gather_phone_data.drop(1).every_nth(3) #every third starting with the second is a maker
+				@models = gather_phone_data.drop(2).every_nth(3) #every third starting with the third is a model
+			end
 		end
 	end
 	erb :index
