@@ -25,15 +25,15 @@ iPhone® SE
 //ss7.vzw.com/is/image/VerizonWireless/Motorola_Droid_Bounce_Black_Without?$pngalpha$&wid=223&hei=243
 Motorola
 DROID TURBO 2
-//ss7.vzw.com/is/image/VerizonWireless/Samsung_Galaxy_Core_Prime?$pngalpha$&wid=223&hei=243
-Samsung
-Galaxy Core Prime™
 //ss7.vzw.com/is/image/VerizonWireless/apple-iphone-6-plus-spacegray?$pngalpha$&wid=223&hei=243
 Apple
 iPhone® 6 Plus
 //ss7.vzw.com/is/image/VerizonWireless/Samsung_Galaxy_S5_Black?$pngalpha$&wid=223&hei=243
 Samsung
 Galaxy S® 5
+//ss7.vzw.com/is/image/VerizonWireless/LG_G5_Silver?$pngalpha$&wid=223&hei=243
+LG
+G5
 //ss7.vzw.com/is/image/VerizonWireless/Samsung_Hero2_Black?$pngalpha$&wid=223&hei=243
 Samsung
 Galaxy S7 edge
