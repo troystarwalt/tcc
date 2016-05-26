@@ -65,6 +65,11 @@ post '/hideShowCarousel' do
 	end
 end
 
+post '/scraper' do 
+	require './public/scripts/scraper.rb'
+	redirect '/admin'
+end
+
 def gather_phone_data
 	lines = File.readlines('phone_images.txt')#opens file in read/write mode
 	#lines have '\n' appended to them

@@ -21,10 +21,6 @@ image_nodes.each{|node| images.push node.children.children[1].attributes['src'].
 text_nodes = parse_page.css('.phone-carousel').css('.phone-carousel-slide-wrapper').children.children.css('a > span')
 text_nodes.each_with_index.map{|node, index| index % 2 == 0 ? makers << node.text : models << node.text}
 
-p makers
-p models
-
-
 ## format textfile 1)img, 2)title, 3)subtitle
 package = []
 images.each_with_index do |image, index|
@@ -33,6 +29,6 @@ images.each_with_index do |image, index|
 	package << models[index]
 end
 
-File.open("../../phone_images.txt", "w+") do |f|
-	package.map{|line| f.puts(line) }
+File.open("phone_images.txt", "w+") do |f|
+	package.map{ |line| f.puts(line) }
 end

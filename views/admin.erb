@@ -1,5 +1,6 @@
 <div class="container admin-container">
 	<h1>Admin Panel</h1>
+	
 	<form id="hideCarousel">
 		<!-- Value attribute of input is loaded from database and updated upon click. -->
 		<input type="hidden" name="[toggle]toggleCarousel" value=<%= @status %>>
@@ -11,7 +12,8 @@
 			<% end %>	
 		</span></button>
 	</form>
-	<form id="updateCarousel">
+
+	<form id="updateCarousel" action='/scraper' method='POST'>
 		<button><span class="updateButton">Update Carousel</span></button>
 	</form>
 </div>
