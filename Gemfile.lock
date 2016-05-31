@@ -1,11 +1,27 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (4.2.6)
+      activesupport (= 4.2.6)
+      builder (~> 3.1)
+    activerecord (4.2.6)
+      activemodel (= 4.2.6)
+      activesupport (= 4.2.6)
+      arel (~> 6.0)
+    activesupport (4.2.6)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arel (6.0.3)
+    builder (3.2.2)
     coderay (1.1.1)
     ffi (1.9.10)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    i18n (0.7.0)
     json (1.8.3)
     listen (3.1.4)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -13,9 +29,11 @@ GEM
       ruby_dep (~> 1.2)
     method_source (0.8.2)
     mini_portile2 (2.0.0)
+    minitest (5.9.0)
     multi_xml (0.5.5)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -23,6 +41,7 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -34,19 +53,37 @@ GEM
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+    sinatra-activerecord (2.0.9)
+      activerecord (>= 3.2)
+      sinatra (~> 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
+    sinatra-redirect-with-flash (0.2.1)
+      sinatra (>= 1.0.0)
     slop (3.6.0)
+    sqlite3 (1.3.11)
+    thread_safe (0.3.5)
     tilt (2.0.3)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   httparty
   nokogiri
+  pg
   pry
+  rake
   rerun
   sass
   sinatra
+  sinatra-activerecord
+  sinatra-flash
+  sinatra-redirect-with-flash
+  sqlite3
 
 BUNDLED WITH
    1.12.3
